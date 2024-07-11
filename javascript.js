@@ -204,12 +204,12 @@ Luego declarar una nueva variable cuyo valor sea el módulo entre las dos variab
 
 let numerito1 = 66;
 let numerito2 = 79023;
-let suma = numerito1 + numerito2
-let resta = numerito1 - numerito2
-let multi = numerito1 * numerito2
-let division = numerito1 / numerito2
-let modulo = numerito1 % numerito2
-console.log(suma + resta + multi + division + modulo);
+let suma = String(numerito1 + numerito2);
+let resta = String(numerito1 - numerito2)
+let multi = String(numerito1 * numerito2)
+let division = String(numerito1 / numerito2)
+let modulo = String(numerito1 % numerito2)
+console.log(suma, resta, multi, division, modulo);
 
 /*6. Declarar una variable de tipo number y otra de tipo string. 
 Luego sumar ambas variables y guardar su resultado en una nueva variable. 
