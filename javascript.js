@@ -257,7 +257,7 @@ let nununumero2 = 333333333;
 let palabrita1 = "marcelo";
 let palabrita2 = "tinelli";
 let cadenitaCarmen = String(nununumero1+nununumero2+palabrita1+palabrita2);
-cadenitaCarmen = toString(nununumero1+nununumero2+palabrita1+palabrita2);
+cadenitaCarmen = (nununumero1+nununumero2+palabrita1+palabrita2);
 console.log(cadenitaCarmen);
 
 /*11. Crear dos variables de tipo number.
