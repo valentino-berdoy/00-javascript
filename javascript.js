@@ -321,3 +321,67 @@ let altura = 40;
 console.log("el area del circulo es: "+(pi*radio**2))
 console.log("el area del cuadradito: "+(altura*4))
 console.log("el area del triangulo es: "+(0.5*base*altura))
+
+
+//-----------Cuestionario Variables------------
+
+/*
+
+1- ¿Qué es una variable en JavaScript?
+es un espacio en la memoria para almacenar datos, sea cual sea el tipo
+
+2- ¿Qué diferencia hay entre var, let y const?
+var y let son variables mutables y const son variables inmutables. let y const son tipos 
+de variables mas nuevos
+
+3- ¿Cuál es el ámbito de una variable declarada con var?
+tiene un ambito de funcion
+
+4- ¿Cuál es el ámbito de una variable declarada con let?
+tiene un ambito de bloque
+
+5- ¿Cuál es el ámbito de una variable declarada con const?
+tiene un ambito de bloque
+
+6- ¿Qué sucede si intentas redeclarar una variable con var en el mismo ámbito?
+eso esta permitido, es posible y no genera ningun inconveniente
+
+7- ¿Qué sucede si intentas redeclarar una variable con let en el mismo ámbito?
+no te lo permite, tirando error ya que su ambiente es de bloque
+
+8- ¿Qué sucede si intentas cambiar el valor de una constante declarada con const?
+no te lo permite, ya que una veez creada la constante no te permite cabiar su contenido
+
+9- ¿Es posible declarar una variable sin inicializarla? Si es así, ¿qué valor tiene por defecto?
+es posible y su tipo es "undefined"
+
+10- ¿Qué tipo de error se genera al intentar usar una variable no declarada?
+salta un error de "Uncaught", y te describe el error con que no esta definida la varible
+
+11- ¿Qué diferencia hay entre declarar una variable e inicializarla?
+declarar una variable es indicar que existe simplemente e inicializarla es
+declararla y darle algun valor
+
+12- ¿Qué es el hoisting en JavaScript?
+significa que si inicializamos una variable en medio del codigo el programa automaticamente
+la declarará al inicio del programa o "scope"
+
+13- ¿Cómo afecta el hoisting a las variables declaradas con var?
+el hoisting al declarar las funciones al inicio del scope, significa que hasta ser inicializadas su
+valor sera "undefined"
+
+14- ¿Qué sucede si intentas acceder a una variable antes de declararla con let o const?
+no se puede acceder y saltara un "ReferenceError"
+
+15- ¿Qué es una variable global?
+es una variable que se puede acceder en cualquier parte del codigo, ya que
+no se limita a su bloque
+
+16- ¿Es posible cambiar el tipo de datos de una variable en JavaScript? Da un ejemplo.
+si es posible de varias maneras.
+un ejemplo es simplemente que le asignemos otro valor, utilizando funciones
+reservadas como String(), entre otros
+
+17- ¿Cómo se puede verificar el tipo de una variable en JavaScript?
+es posible verificarlo con el la funcion typeof()
+*/
