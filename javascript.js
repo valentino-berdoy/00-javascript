@@ -182,13 +182,25 @@ esclavo4 = String(2*5)
 esclavo5 = String(27%5)
 console.log(esclavo1, esclavo2, esclavo3, esclavo4, esclavo5);
 
-let cuenta = 1000
+let cuenta = 1000;
 let propinaUsuario = 1;
 let propinaADejar = cuenta * (propinaUsuario/100);
 console.log("la propina es: "+ propinaADejar+ "$");
 
 let precio = 10000;
 let descuento = 20;
-let precioFinal = precio - (precio* (descuento/100))
-console.log("precio con descuento: "+precioFinal+"$")
+let precioFinal = precio - (precio* (descuento/100));
+console.log("precio con descuento: "+precioFinal+"$");
 
+const añoActual = 2024;
+let nacimiento = 2005;
+console.log("su edad es: "+(añoActual - nacimiento));
+
+//en milimetros
+const pi = 3.14159;
+let radio = 6;
+let base = 70;
+let altura = 40;
+console.log("el area del circulo es: "+(pi*radio**2))
+console.log("el area del cuadradito: "+(altura*4))
+console.log("el area del triangulo es: "+(0.5*base*altura))
