@@ -2,20 +2,33 @@
 especial a Ignacio Bergantiños) estamos aprendiendo a usar comentarios, console.log, todas sus
 variantes y todos los tipos de datos primitivos, para luego, implementarlas en algun 
 programa a futuro */
+//--------------------------------------------------------------------------------------------------------------------
+/*Ejercicio 1: Mensajes Básicos
 
+Muestra un mensaje en la consola que diga "Hola, mundo!".
+Muestra en la consola tu nombre.
+Muestra en la consola tu ciudad y país */
 
 console.log("hola, mundo");
 console.log("valentino berdoy");
 console.log("CABA, argentina");
 
+/*Ejercicio 2: Diferentes Niveles de Mensajes
 
+Muestra un mensaje normal en la consola diciendo "Bienvenido al sistema".
+Muestra un mensaje de información en la consola diciendo "Cargando aplicación...".
+Muestra una advertencia en la consola diciendo "Advertencia: Espacio en disco bajo".
+Muestra un error en la consola diciendo "Error: No se pudo conectar al servidor". */
 
 console.log("Bienvenido al sistema");
 console.info("Cargando aplicacion...");
 console.warn("Advertencia: espacio del disco bajo");
 console.error("Error: no se pudo conectar al servidor");
 
+/*Ejercicio 3: Pirámide.
 
+Crea un script que imprima tres líneas de estrellas * para que parezca una pirámide en la pantalla.
+Ejecute y realice cambios hasta que vea que funciona correctamente. */
 
 console.group("piramide");
 console.log("  *")
@@ -23,7 +36,10 @@ console.log(" ***")
 console.log("*****")
 console.groupEnd("piramide")
 
+/*Ejercicio 4: Debugger
 
+Imprimir en la consola los números del 1 al 10, haciendo que el codigo se pause en luego de mostrar el número 5.
+Ejecutar paso a paso el resto de los numeros.*/
 
 console.group("numeros");
 console.log("1")
@@ -42,6 +58,11 @@ console.groupEnd("numeros")
 
 //-------------- practica 2----------------
 
+
+/*Ejercicio 1: Palabras Reservadas
+
+Escribe un comentario que liste al menos 8 palabras reservadas en JavaScript. */
+
 //este console group muestra palabras reservadas
 console.group("palabrasReservadas")
 console.log("null")
@@ -53,6 +74,12 @@ console.log("typeof")
 console.log("true")
 console.log("with")
 console.groupEnd("palabrasReservadas")
+
+/*Ejercicio 2: Tipos de Datos Primitivos
+
+Escribe un comentario que liste todos los tipos de datos primitivos en JavaScript.
+Usa console.log para mostrar un ejemplo de cada tipo de dato primitivo.
+https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_datatypes1 (no hacer el de objetos) */
 
 /*
 tipos de datos primitivos:
@@ -67,6 +94,13 @@ undefined
 
 */
 
+/*Ejercicio 3: Práctica Combinada
+
+Escribe un bloque de código que haga lo siguiente:
+
+Incluya un comentario explicativo al inicio.
+Liste varias palabras reservadas en un comentario.
+Use console.log para mostrar ejemplos de diferentes tipos de datos primitivos. */
 
 let length = 16;          // number
 console.log(typeof(length));
@@ -76,8 +110,10 @@ let bo = false;            // boolean
 console.log(typeof(bo));
 
 
-
 //------------- practica 3---------------
+
+
+
 
 console.log(15+30);
 console.log(100-45);
@@ -86,14 +122,17 @@ console.log(56/8);
 console.log(27%4);
 
 
+
 console.log(20+22);
 console.log("hola "+"mundo!");
 console.log(5*(3+2));
 
 
+
 console.log("numero: "+5);
 console.log("ejercicio: "+3+". hecho!");
 console.log("ejercicio: "+(3+97)+". hecho!");
+
 
 
 console.log(2=="2" && 2===2);
@@ -105,21 +144,38 @@ console.log(4<3 && 5<=2 && 45>666 && 67>=994);
 
 
 
-//----------------- practica 3 ----------------------
+//----------------- practica 4 ----------------------
+
+
+//1. Declarar una variable de tipo string cuyo nombre represente de forma clara su contenido.
 
 let nombre = "ricardito";
 console.log(nombre);
 
+//2. Declarar una variable de tipo number cuyo nombre represente de forma clara su contenido.
+
 let numeroDos = 2;
 console.log(numeroDos);
 
+//3. Declarar una variable de tipo boolean cuyo nombre represente de forma clara su contenido.
+
 let verdadero = true
 console.log(verdadero);
+
+//4. Declarar dos variables de tipo string. Luego declarar una nueva variable cuyo valor
+//sea la concatenación de las dos variables previamente creadas
 
 let hola =  "hola,";
 let comoEstas = " como estas?"
 let frase =  hola+comoEstas;
 console.log(frase);
+
+/*5. Declarar dos variables de tipo number.
+ Luego declarar una nueva variable cuyo valor sea la suma de las dos variables previamente creadas. 
+Luego declarar una nueva variable cuyo valor sea la resta de las dos variables previamente creadas. 
+Luego declarar una nueva variable cuyo valor sea la multiplicación de las dos variables previamente creadas. 
+Luego declarar una nueva variable cuyo valor sea la división de las dos variables previamente creadas. 
+Luego declarar una nueva variable cuyo valor sea el módulo entre las dos variables previamente creadas. */ 
 
 let numerito1 = 66;
 let numerito2 = 79023;
@@ -130,11 +186,12 @@ let division = numerito1 / numerito2
 let modulo = numerito1 % numerito2
 console.log(suma + resta + multi + division + modulo);
 
+
 let numeroideInt = 45;
 let numeroideString = "3";
-numeroideString = parseInt(numeroideString);
 let resultaloide = numeroideInt + numeroideString;
 console.log(resultaloide);
+console.log(typeof(resultaloide)) // es string
 
 let buleancito = false;
 let opuesto = !buleancito;
