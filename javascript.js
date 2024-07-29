@@ -626,7 +626,7 @@ switch(genero){
 //Crea un bloque de código que reciba un número del 1 al 10.
 //Utiliza switch para imprimir en consola ‘Uno’, ‘Dos’, ‘Tres’, o ‘Mayor a 3’, según corresponda. 
 
-let numeo = 5;
+let numeo = 7;
 switch(numeo){
     case 1:
         console.log("uno");
@@ -646,7 +646,19 @@ switch(numeo){
     case 10:
         console.log("mayor a tres");
         break;
+    default:
+        console.log("ingrese otro numero")
 }
 
 //Crea un bloque de código que tome de referencia una letra.
 //Utiliza switch para imprimir en consola si es una vocal, una consonante, o un caracter especial.
+let caractersito = 6
+
+switch(typeof caractersito){
+    case "number":
+        console.log("es un numero");
+        break;
+        case "string":
+        console.log("es una letra");
+        break;
+}
