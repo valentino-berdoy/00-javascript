@@ -3,6 +3,11 @@ especial a Ignacio Bergantiños) estamos aprendiendo a usar comentarios, console
 variantes, todos los tipos de datos primitivos y mas!, para luego, implementarlas en algun 
 programa a futuro */
 //--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 /*Ejercicio 1: Mensajes Básicos
 
 Muestra un mensaje en la consola que diga "Hola, mundo!".
@@ -393,25 +398,25 @@ es posible verificarlo con el la funcion typeof()
 
 //If:
 
-/*Crea un bloque de código que compare dos variables numéricas. Si el número A es mayor que el número B, 
-imprimir en consola ‘El número A es mayor a B‘.*/
+//1. Crea un bloque de código que compare dos variables numéricas. Si el número A es mayor que el número B, 
+//imprimir en consola ‘El número A es mayor a B‘.
 
 if (numerito1 > numerito2)
     console.log(`el numero ${numerito1} es mayor a ${numerito2}`)
 
-/*Crea un bloque de código que tome la edad de un usuario y la compare con un número de referencia.
-Si la edad es mayor al */
+//2. Crea un bloque de código que tome la edad de un usuario y la compare con un número de referencia.
+//Si la edad es mayor al 
 
 let edadusu = 50;
 if (edadusu > 30)
     console.log("ya estas medio viejo");
 
-// Crea un bloque de código que compare dos números e imprima en consola un valor booleano.
+//3. Crea un bloque de código que compare dos números e imprima en consola un valor booleano.
 let puerta = false
 if (nununumero1 == nununumero2)
     console.log(puerta);
 
-//Crea un bloque de código que compare dos nombres, y si ambos son iguales imprima en consola el nombre.
+//4. Crea un bloque de código que compare dos nombres, y si ambos son iguales imprima en consola el nombre.
 
 let humano1 = "Alside";
 let humano2 = "Alside";
@@ -419,7 +424,7 @@ let humano2 = "Alside";
 if (humano1 == humano2)
     console.log(humano1);
 
-//Crea un bloque de código que compare dos nombres, y si ambos son diferentes imprima en consola un mensaje.
+//5. Crea un bloque de código que compare dos nombres, y si ambos son diferentes imprima en consola un mensaje.
 
 humano1 = "Alside";
 humano2 = "Ricardo";
@@ -427,13 +432,13 @@ humano2 = "Ricardo";
 if (humano1 != humano2)
     console.log("son dos personas diferentes");
 
-//Crea un bloque de código que imprima en consola un número en caso de que sea un número negativo.
+//6. Crea un bloque de código que imprima en consola un número en caso de que sea un número negativo.
 
 let deuda = -90;
 if(deuda < 0)
     console.log(deuda);
 
-//Crea un bloque de código que imprima en consola un número en caso de que NO sea un número negativo.
+//7. Crea un bloque de código que imprima en consola un número en caso de que NO sea un número negativo.
 
 deuda = 99990;
 if(deuda > 0)
@@ -441,7 +446,7 @@ if(deuda > 0)
 
 //--------------- If…else: ---------------
 
-//Crea un bloque de código que compare dos números. Si el número es par, imprimir en consola 
+//8. Crea un bloque de código que compare dos números. Si el número es par, imprimir en consola 
 //‘El número es par’. De lo contrario, imprimir ‘El número es impar’.
 
 let comparasion =80;
@@ -450,7 +455,7 @@ if (comparasion % 2 == 0)
 else
     console.log("es impar");
 
-//Crea un bloque de código que compare dos números y luego imprima en consola si es positivo o negativo.
+//9. Crea un bloque de código que compare dos números y luego imprima en consola si es positivo o negativo.
 
 let maquinola = 30
 
@@ -459,7 +464,7 @@ if (maquinola > 0)
 else
     console.log("es negativo");
 
-//Crea una función que tome de referencia una variable string cuyo valor sea una letra,
+//10. Crea una función que tome de referencia una variable string cuyo valor sea una letra,
 //y luego imprima en consola si es una vocal o una consonante.
 
 let letroide = "ñ"
@@ -468,7 +473,7 @@ if (letroide == "a" || letroide == "e" || letroide == "i" || letroide == "o" || 
 else
     console.log("es consonante");
 
-//Crea un bloque de código que tome de referencia un nombre.
+//11. Crea un bloque de código que tome de referencia un nombre.
 //Si el nombre ingresado es ‘Pedro’ imprimir en consola ‘Hola Pedro, como estás?’.
 //De lo contrario, imprimir ‘Hola! Cómo te llamas?’.
 
@@ -479,7 +484,7 @@ if (saludo == "pedro")
 else
     console.log("quien sos");
 
-//Crea un bloque de código que tome de referencia la nota de un examen y devuelva ‘Estás aprobado’
+//12. Crea un bloque de código que tome de referencia la nota de un examen y devuelva ‘Estás aprobado’
 //si la nota es mayor o igual a 7, o ‘Estás desaprobado’ si la nota es menor a 7.
 
 let lanota420 = 9;
@@ -491,7 +496,7 @@ else
 
 //-------------Else if:----------
 
-//Crea un bloque de código que tome de referencia un número e imprima en pantalla si el número es menor 
+//13. Crea un bloque de código que tome de referencia un número e imprima en pantalla si el número es menor 
 //a 10, mayor a 50, o si está entre esos dos valores.
 
 let numeraso = 40;
@@ -503,7 +508,7 @@ else if (numeraso < 10)
 else
     console.log("esta entre 10 y 50");
 
-//Crea un bloque de código que compare dos números. Si ambos números son menores a 10,
+//14. Crea un bloque de código que compare dos números. Si ambos números son menores a 10,
 //imprimir en consola el múltiplo. Si ambos números son mayores a 50,
 //imprimir en consola su suma. Sino, imprimir en consola el primer número menos el segundo.
 
@@ -517,7 +522,7 @@ else if (numeraso < 10 && numeraso2 <10)
 else
     console.log("su resta es: "+(numeraso-numeraso2));
 
-//Crea un bloque de código que tome de referencia un número del 1 al 7 y devuelva el día de la semana correspondiente. 
+//15. Crea un bloque de código que tome de referencia un número del 1 al 7 y devuelva el día de la semana correspondiente. 
 //Por ejemplo: 1 = ‘lunes’.
 
 let diahermoso = 5;
@@ -536,7 +541,7 @@ else if (diahermoso == 6)
 else if (diahermoso == 7)
     console.log("hoy es domingo");
 
-//Crea un bloque de código que reciba un número e imprima en pantalla si es divisible por 2, 3, o ninguno.
+//16. Crea un bloque de código que reciba un número e imprima en pantalla si es divisible por 2, 3, o ninguno.
 
 let sujeto = 30;
 
@@ -547,7 +552,7 @@ else if (sujeto % 3 == 0)
 else if (sujeto % 2 != 0 && sujeto % 3 != 0)
     console.log("no es divisible por ninguno")
 
-//Crea un bloque de código que tome de referencia un número del 1 al 12 y devuelva el mes correspondiente. 
+//17. Crea un bloque de código que tome de referencia un número del 1 al 12 y devuelva el mes correspondiente. 
 //Por ejemplo: 1 = ‘Enero’.
 let mesaso = 4
 if (mesaso == 1)
@@ -577,7 +582,7 @@ else if (mesaso == 12)
 
 //---------------Switch:---------
 
-//Crea un bloque de código que tome de referencia un número del 1 al 7.
+//18. Crea un bloque de código que tome de referencia un número del 1 al 7.
 //Utiliza una sentencia Switch para imprimir en consola el día de la semana correspondiente.
 
 let quediaes = 1;
@@ -607,7 +612,7 @@ switch (quediaes){
         break;
 }
 
-//Crea un bloque de código que tome de referencia una letra correspondiente al género 
+//19. Crea un bloque de código que tome de referencia una letra correspondiente al género 
 //(‘H’, ‘M’, ‘X’…). Utiliza una sentencia switch para imprimir en consola el género correspondiente.
 
 let genero = "h"
@@ -623,7 +628,7 @@ switch(genero){
         break;
 }
 
-//Crea un bloque de código que reciba un número del 1 al 10.
+//20. Crea un bloque de código que reciba un número del 1 al 10.
 //Utiliza switch para imprimir en consola ‘Uno’, ‘Dos’, ‘Tres’, o ‘Mayor a 3’, según corresponda. 
 
 let numeo = 7;
@@ -650,7 +655,7 @@ switch(numeo){
         console.log("ingrese otro numero")
 }
 
-//Crea un bloque de código que tome de referencia una letra.
+//21. Crea un bloque de código que tome de referencia una letra.
 //Utiliza switch para imprimir en consola si es una vocal, una consonante, o un caracter especial.
 let caractersito = 6
 
@@ -662,3 +667,113 @@ switch(typeof caractersito){
         console.log("es una letra");
         break;
 }
+
+//22. Crea un bloque de código que tome de referencia un número del 1 al 4.
+//Utiliza switch para imprimir en consola la estación del año correspondiente.
+
+let estacionAño = 3;
+
+switch(estacionAño){
+    case 1:
+        console.log("verano");
+        break;    
+    case 2:
+        console.log("otoño");
+        break;
+    case 3:   
+        console.log("invierno");
+        break;
+    case 4:
+        console.log("primavera");
+        break;
+    default:
+        console.log("que estacion estas animal");
+        break;
+}
+
+//---------Operador ternario:----------------
+
+//23. Crea un bloque de código que tome de referencia una variable ‘edad’.
+//Utiliza el operador ternario para imprimir en consola si es o no mayor de edad.
+
+let edadas =10;
+console.log(edadas >= 18 ? "sos mayor" : "sos menor");
+
+//24. Crea un bloque de código que tome de referencia un número.
+//Utiliza el operador ternario para determinar si es par o impar y muestra el resultado en consola.
+
+let otroNumeroMas =60;
+console.log(otroNumeroMas % 2 == 0 ? "es par" : "es impar");
+
+//25. Crea un bloque de código que tome de referencia dos números y utilice el operador ternario para determinar cual de los dos es el mayor.
+//Luego imprime en consola el resultado.
+
+let maaasNumeros1 = 20;
+let maaasNumeros2 = 9090909090909;
+
+console.log(maaasNumeros1 > maaasNumeros2 ? maaasNumeros1 : maaasNumeros2)
+
+//26. Crea un bloque de código que tome de referencia un número del 1 al 7 y utilice el operador
+//ternario para imprimir en consola el día de la semana correspondiente.
+let dia = 3;
+console.log(dia === 1 ? "lunes": 
+            dia === 2 ? "martes":
+            dia === 3 ? "miercoles":
+            dia === 4 ? "jueves":
+            dia === 5 ? "viernes":
+            dia === 6 ? "sabado":
+            dia === 7 ? "domingo": 
+            "numero cualquiera");
+
+//27. Crea un bloque de código que tome de referencia un número.
+//Utiliza el operador ternario para determinar si es positivo, negativo o cero e imprime el resultado en consola.
+
+let teGustanLosNumerosPREGUNTANoPREGUNTABuenoAcaHayMas = -22267767676767622;
+console.log(teGustanLosNumerosPREGUNTANoPREGUNTABuenoAcaHayMas >= 0 ? "positivo" : "negativo");
+
+//28. Crea un bloque de código que tome de referencia un número del 1 al 100
+//y utilice el operador ternario para determinar si es múltiplo de 3 y 5
+//para imprimir el resultado en consola.
+
+let hola2LaVenganza = 90;
+console.log(hola2LaVenganza % 5 == 0 ? `multiplo de 5: ${hola2LaVenganza / 5 } * 5 = ${hola2LaVenganza}`:
+            hola2LaVenganza % 3 == 0 ? `multiplo de 3: ${hola2LaVenganza / 3 } * 3 = ${hola2LaVenganza}`: 
+            "no garpa");
+console.log(hola2LaVenganza % 3 == 0 ? `multiplo de 3: ${hola2LaVenganza / 3 } * 3 = ${hola2LaVenganza}`:
+            hola2LaVenganza % 5 == 0 ? `multiplo de 5: ${hola2LaVenganza / 5 } * 5 = ${hola2LaVenganza}`: 
+            "no garpa");
+
+//-------------------- Prácticas: ----------------------
+
+//29. Crea un bloque de código que tome de referencia un número del 1 al 100 y,
+//utilizando el tipo de condicional que prefieras, imprimir si es múltiplo de 2, 3 o 5 
+//incluyendo las diferentes combinaciones posibles.
+
+let numero3p = 50;
+console.log((numero3p % 2 === 0 && numero3p % 3 === 0 && numero3p % 5 === 0) ? 'Multiplo de 2, 3 y 5' :
+            (numero3p % 2 === 0 && numero3p % 3 === 0) ? 'Multiplo de 2 y 3' :
+            (numero3p % 2 === 0 && numero3p % 5 === 0) ? 'Multiplo de 2 y 5' :
+            (numero3p % 3 === 0 && numero3p % 5 === 0) ? 'Multiplo de 3 y 5' :
+            (numero3p % 2 === 0) ? 'Multiplo de 2' :
+            (numero3p % 3 === 0) ? 'Multiplo de 3' :
+            (numero3p % 5 === 0) ? 'Multiplo de 5' :
+            'No es multiplo de niguno');
+
+//30. Crea un bloque de código que reciba un numero del 1 al 1000.
+//Utiliza el tipo de condicional que prefieras para imprimir en consola si el numero es par o impar,
+//si es divisible por 2, por 3 o por 5, y si es mayor o menor a 50.
+
+let lionelMessi = 34;
+
+console.log((lionelMessi % 2 === 0 && lionelMessi % 3 === 0 && lionelMessi % 5 === 0) ? 'Divisible por 2, 3 y 5' :
+            (lionelMessi % 2 === 0 && lionelMessi % 3 === 0) ? 'Divisible por 2 y 3' :
+            (lionelMessi % 2 === 0 && lionelMessi % 5 === 0) ? 'Divisible por 2 y 5' :
+            (lionelMessi % 3 === 0 && lionelMessi % 5 === 0) ? 'Divisible por 3 y 5' :
+            (lionelMessi % 2 === 0) ? 'Divisible por 2' :
+            (lionelMessi % 3 === 0) ? 'Divisible por 3' :
+            (lionelMessi % 5 === 0) ? 'Divisible por 5' :
+            'No es divisible por 2, 3 ni 5');
+console.log((lionelMessi > 50) ? 'Mayor que 50' : 'Menor o igual a 50');
+console.log((lionelMessi % 2 === 0) ? 'Par' : 'Impar');
+
+//31. Desarrolla 10 nuevas situaciones en donde requieras de utilizar condicionales para su resolución.
