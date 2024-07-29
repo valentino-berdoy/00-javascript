@@ -1,6 +1,6 @@
 /* en esta practica realizada junto a los empleados Santiago Piedrafita y Javier Valdez (mencion
 especial a Ignacio Bergantiños) estamos aprendiendo a usar comentarios, console.log, todas sus
-variantes y todos los tipos de datos primitivos, para luego, implementarlas en algun 
+variantes, todos los tipos de datos primitivos y mas!, para luego, implementarlas en algun 
 programa a futuro */
 //--------------------------------------------------------------------------------------------------------------------
 /*Ejercicio 1: Mensajes Básicos
@@ -385,3 +385,268 @@ reservadas como String(), entre otros
 17- ¿Cómo se puede verificar el tipo de una variable en JavaScript?
 es posible verificarlo con el la funcion typeof()
 */
+
+
+
+//----------------------------- TP condicionales ---------------------------
+
+
+//If:
+
+/*Crea un bloque de código que compare dos variables numéricas. Si el número A es mayor que el número B, 
+imprimir en consola ‘El número A es mayor a B‘.*/
+
+if (numerito1 > numerito2)
+    console.log(`el numero ${numerito1} es mayor a ${numerito2}`)
+
+/*Crea un bloque de código que tome la edad de un usuario y la compare con un número de referencia.
+Si la edad es mayor al */
+
+let edadusu = 50;
+if (edadusu > 30)
+    console.log("ya estas medio viejo");
+
+// Crea un bloque de código que compare dos números e imprima en consola un valor booleano.
+let puerta = false
+if (nununumero1 == nununumero2)
+    console.log(puerta);
+
+//Crea un bloque de código que compare dos nombres, y si ambos son iguales imprima en consola el nombre.
+
+let humano1 = "Alside";
+let humano2 = "Alside";
+
+if (humano1 == humano2)
+    console.log(humano1);
+
+//Crea un bloque de código que compare dos nombres, y si ambos son diferentes imprima en consola un mensaje.
+
+humano1 = "Alside";
+humano2 = "Ricardo";
+
+if (humano1 != humano2)
+    console.log("son dos personas diferentes");
+
+//Crea un bloque de código que imprima en consola un número en caso de que sea un número negativo.
+
+let deuda = -90;
+if(deuda < 0)
+    console.log(deuda);
+
+//Crea un bloque de código que imprima en consola un número en caso de que NO sea un número negativo.
+
+deuda = 99990;
+if(deuda > 0)
+    console.log(deuda);
+
+//--------------- If…else: ---------------
+
+//Crea un bloque de código que compare dos números. Si el número es par, imprimir en consola 
+//‘El número es par’. De lo contrario, imprimir ‘El número es impar’.
+
+let comparasion =80;
+if (comparasion % 2 == 0)
+    console.log("es par")
+else
+    console.log("es impar");
+
+//Crea un bloque de código que compare dos números y luego imprima en consola si es positivo o negativo.
+
+let maquinola = 30
+
+if (maquinola > 0)
+    console.log("es positivo");
+else
+    console.log("es negativo");
+
+//Crea una función que tome de referencia una variable string cuyo valor sea una letra,
+//y luego imprima en consola si es una vocal o una consonante.
+
+let letroide = "ñ"
+if (letroide == "a" || letroide == "e" || letroide == "i" || letroide == "o" || letroide == "u")
+    console.log("es una vocal");
+else
+    console.log("es consonante");
+
+//Crea un bloque de código que tome de referencia un nombre.
+//Si el nombre ingresado es ‘Pedro’ imprimir en consola ‘Hola Pedro, como estás?’.
+//De lo contrario, imprimir ‘Hola! Cómo te llamas?’.
+
+let saludo = "pedro"
+
+if (saludo == "pedro")
+    console.log("hola pedro como andas?");
+else
+    console.log("quien sos");
+
+//Crea un bloque de código que tome de referencia la nota de un examen y devuelva ‘Estás aprobado’
+//si la nota es mayor o igual a 7, o ‘Estás desaprobado’ si la nota es menor a 7.
+
+let lanota420 = 9;
+if (lanota420 >= 7)
+    console.log("estas aprobado");
+else
+    console.log("aplazado!!!!!!");
+
+
+//-------------Else if:----------
+
+//Crea un bloque de código que tome de referencia un número e imprima en pantalla si el número es menor 
+//a 10, mayor a 50, o si está entre esos dos valores.
+
+let numeraso = 40;
+
+if (numeraso > 50)
+    console.log("el numero es mayo a 50")
+else if (numeraso < 10)
+    console.log("es menor a 10")
+else
+    console.log("esta entre 10 y 50");
+
+//Crea un bloque de código que compare dos números. Si ambos números son menores a 10,
+//imprimir en consola el múltiplo. Si ambos números son mayores a 50,
+//imprimir en consola su suma. Sino, imprimir en consola el primer número menos el segundo.
+
+numeraso = 39;
+numeraso2 = 590;
+
+if (numeraso > 50 && numeraso2 > 50)
+    console.log("su suma es: "+numeraso+numeraso2)
+else if (numeraso < 10 && numeraso2 <10)
+    console.log("su multiplo es: "+numeraso*numeraso2)
+else
+    console.log("su resta es: "+(numeraso-numeraso2));
+
+//Crea un bloque de código que tome de referencia un número del 1 al 7 y devuelva el día de la semana correspondiente. 
+//Por ejemplo: 1 = ‘lunes’.
+
+let diahermoso = 5;
+if (diahermoso == 1)
+    console.log("hoy es lunes");
+else if (diahermoso == 2)
+    console.log("hoy es martes");
+else if (diahermoso == 3)
+    console.log("hoy es miercoles");
+else if (diahermoso == 4)
+    console.log("hoy es jueves");
+else if (diahermoso == 5)
+    console.log("hoy es viernes");
+else if (diahermoso == 6)
+    console.log("hoy es sabado");
+else if (diahermoso == 7)
+    console.log("hoy es domingo");
+
+//Crea un bloque de código que reciba un número e imprima en pantalla si es divisible por 2, 3, o ninguno.
+
+let sujeto = 30;
+
+if (sujeto % 2 == 0)
+    console.log("es divisible por 2");
+else if (sujeto % 3 == 0)
+    console.log("es divisible por 3");
+else if (sujeto % 2 != 0 && sujeto % 3 != 0)
+    console.log("no es divisible por ninguno")
+
+//Crea un bloque de código que tome de referencia un número del 1 al 12 y devuelva el mes correspondiente. 
+//Por ejemplo: 1 = ‘Enero’.
+let mesaso = 4
+if (mesaso == 1)
+    console.log("enero");
+else if (mesaso == 2)
+    console.log("febrero");
+else if (mesaso == 3)
+    console.log("marzo");
+else if (mesaso == 4)
+    console.log("abril");
+else if (mesaso == 5)
+    console.log("mayo");
+else if (mesaso == 6)
+    console.log("junio");
+else if (mesaso == 7)
+    console.log("julio");
+else if (mesaso == 8)
+    console.log("agosto");
+else if (mesaso == 9)
+    console.log("septiembre");
+else if (mesaso == 10)
+    console.log("octubre");
+else if (mesaso == 11)
+    console.log("noviembre");
+else if (mesaso == 12)
+    console.log("diciembre");
+
+//---------------Switch:---------
+
+//Crea un bloque de código que tome de referencia un número del 1 al 7.
+//Utiliza una sentencia Switch para imprimir en consola el día de la semana correspondiente.
+
+let quediaes = 1;
+
+switch (quediaes){
+    case 1:
+        console.log("es lunes");
+        break;
+    case 2:
+        console.log("es martes");
+        break;
+    case 3:
+        console.log("es miercoles");
+        break;    
+    case 4:
+        console.log("es jueves");
+        break;
+    
+    case 5:
+        console.log("es viernes");
+        break;
+    case 6:
+        console.log("es sabado");
+        break;    
+    case 7:
+        console.log("es domingo");
+        break;
+}
+
+//Crea un bloque de código que tome de referencia una letra correspondiente al género 
+//(‘H’, ‘M’, ‘X’…). Utiliza una sentencia switch para imprimir en consola el género correspondiente.
+
+let genero = "h"
+switch(genero){
+    case "h":
+        console.log("hombre");
+        break;        
+    case "m":
+        console.log("mujer");
+        break;
+    case "x":
+        console.log("nb");
+        break;
+}
+
+//Crea un bloque de código que reciba un número del 1 al 10.
+//Utiliza switch para imprimir en consola ‘Uno’, ‘Dos’, ‘Tres’, o ‘Mayor a 3’, según corresponda. 
+
+let numeo = 5;
+switch(numeo){
+    case 1:
+        console.log("uno");
+        break;
+    case 2:
+        console.log("dos");
+        break;
+    case 3:
+        console.log("tres");
+        break;
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    case 10:
+        console.log("mayor a tres");
+        break;
+}
+
+//Crea un bloque de código que tome de referencia una letra.
+//Utiliza switch para imprimir en consola si es una vocal, una consonante, o un caracter especial.
