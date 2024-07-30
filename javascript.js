@@ -777,7 +777,28 @@ console.log((lionelMessi > 50) ? 'Mayor que 50' : 'Menor o igual a 50');
 console.log((lionelMessi % 2 === 0) ? 'Par' : 'Impar');
 
 //31. Desarrolla 10 nuevas situaciones en donde requieras de utilizar condicionales para su resolución.
+/*
+        1. Dado un año, determina si es bisiesto.
+        Un año es bisiesto si es divisible por 4, pero no por 100, a menos que también sea divisible por 400.
 
+        2. Dado un usuario, determinar si tiene permisos de administrador 
+        (el usuario puede ser, admin. cliente, viewer o editor)
+        
+        3. Dados dos numeros, comparar cual es mas grande e imprimirlo por consola. El mas pequeño borrarlo
+
+        4. Dado un remedio. Determinar que cantidad debe consumir por dia el usuario
+        (paracetamol 50g x dia, ibuprofeno 20g x dia, frenaler 5g x dia)
+
+        5. Dados 4 numeros, concatenarlos de el mas grande al mas chico
+
+        6. Dados 3 numeros, concatenarlos de el mas chico al mas grande
+
+        7. Dado una cantidad de caracteres determinar si la palabra es larga, mediana o corta
+        (200 caracteres corta, 400 media, 600 larga)
+
+        8. 
+
+*/
 
 /*WWWWWWWWWNNWWWMMMMMMMMMMMMMMMMMMMMMMMMMWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWW
 WWWWWWWWWNNWWWMMMMMMMMMMMMMMMMMMMMMMMMMWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
