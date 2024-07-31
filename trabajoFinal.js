@@ -1,5 +1,3 @@
-
-
 function saludo(nombre, apellido){
     console.log(`bienvenido ${nombre} ${apellido}`);
 }
@@ -89,32 +87,37 @@ function calcularPrecio(cantidadPlatos, plato, cantidadBebidas, bebida, edad, me
     let precioTotal
     let Descuento60 = false
     let DescuentoEfectivo
-    if(plato === 1){
-        precioPlatos = cantidadPlatos * 5000;
-    }
-    else if(plato === 2){
-        precioPlatos = cantidadPlatos * 7500;
-    }
-    else if(plato === 3){
-        precioPlatos = cantidadPlatos * 10000;
-    }
-    else if(plato === 4){
-        precioPlatos = cantidadPlatos * 15000;
+
+    switch(plato){
+        case 1:
+            precioPlatos = cantidadPlatos * 5000;
+            break;
+        case 2:
+            precioPlatos = cantidadPlatos * 7500;
+            break;
+        case 3:
+            precioPlatos = cantidadPlatos * 10000;
+            break;
+        case 4:
+            precioPlatos = cantidadPlatos * 15000;
+            break;
     }
 
-    if (bebida ===1 && edad >=18){
-        precioBebidas = cantidadBebidas * 2000
+    switch(bebida){
+        case 1:
+            precioBebidas = cantidadBebidas * 2000
+            break;
+        case 2:
+            precioBebidas = cantidadBebidas * 1500
+            break;
+        case 3:
+            precioBebidas = cantidadBebidas * 1500
+            break;
+        case 4:
+            precioBebidas = cantidadBebidas * 1000
+            break;
     }
-    else if (bebida ===2){
-        precioBebidas = cantidadBebidas * 1500
-    }
-    else if (bebida ===3){
-        precioBebidas = cantidadBebidas * 1500
-    }
-    else if (bebida ===4){
-        precioBebidas = cantidadBebidas * 1000
-    }
-
+    
     precioTotal = precioBebidas + precioPlatos
     if(edad >= 60){
         Descuento60 = true
@@ -139,7 +142,7 @@ function calcularPrecio(cantidadPlatos, plato, cantidadBebidas, bebida, edad, me
     else if (Descuento60 === true && DescuentoEfectivo === true){
         precioTotal= precioTotal - (precioTotal *0.1)-(precioTotal*0.1)
         console.log("Tiene dos descuentos del 10%, al pagar en efectivo y al ser mayor de 60 años, su cuenta es:",precioTotal+(precioTotal*0.05));
-        console.log("cubiertos:",(precioTotal*0.05))
+        console.log("cubiertos:",precioTotal*0.05)
         console.log("Metodo de pago:",metodoDePago);
     }
     else{
@@ -155,7 +158,7 @@ function gestionarPedido(){
     let nombre = "Santiago"
     let apellido = "Piedrafita"
     let cantidadBebidas = 3
-    let bebida = 1
+    let bebida = 2
     let cantidadPlatos= 2
     let plato = 2
     let metodoDePago = "Efectivo"
