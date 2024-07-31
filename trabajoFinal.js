@@ -120,32 +120,19 @@ function calcularPrecio(cantidadPlatos, plato, cantidadBebidas, bebida, edad, me
 
     precioTotal = precioBebidas + precioPlatos
     if(edad >= 60){
-        Descuento60 = true
+        precioTotal= precioTotal - (precioTotal *0.1)
+        console.log("Tiene un descuento del 10% al tener mas de 60 años, su cuenta es:",precioTotal+(precioTotal*0.05));
     }
 
     if(metodoDePago === "Efectivo"){
-        DescuentoEfectivo = true
-    }
-
-    if(Descuento60=== true && DescuentoEfectivo ===false){
-        precioTotal= precioTotal - (precioTotal *0.1)
-        console.log("Tiene un descuento del 10% al tener mas de 60 años, su cuenta es:",precioTotal+(precioTotal*0.05));
-        console.log("Metodo de pago:",metodoDePago);
-    }
-    else if (Descuento60 === false && DescuentoEfectivo === true){
         precioTotal= precioTotal - (precioTotal *0.1)
         console.log("Tiene un descuento del 10% al pagar en Efectivo, su cuenta es:",precioTotal+(precioTotal*0.05));
-        console.log("Metodo de pago:",metodoDePago);
     }
-    else if (Descuento60 === true && DescuentoEfectivo === true){
-        precioTotal= precioTotal - (precioTotal *0.1)-(precioTotal*0.1)
-        console.log("Tiene dos descuentos del 10%, al pagar en efectivo y al ser mayor de 60 años, su cuenta es:",precioTotal+(precioTotal*0.05));
-        console.log("Metodo de pago:",metodoDePago);
-    }
+
     else{
         console.log("Su precio es:",precioTotal);
-        console.log("Metodo de pago:",metodoDePago);
     }
+    console.log("Metodo de pago:",metodoDePago);
     return precioTotal
 }
 
@@ -154,7 +141,7 @@ function valorCubierto(precioTotal){
 }
 
 function gestionarPedido(){
-    let edad = 10
+    let edad = 100
     let nombre = "Santiago"
     let apellido = "Piedrafita"
     let cantidadBebidas = 3
