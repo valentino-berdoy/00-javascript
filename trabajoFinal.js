@@ -117,7 +117,7 @@ function calcularPrecio(cantidadPlatos, plato, cantidadBebidas, bebida, edad, me
             precioBebidas = cantidadBebidas * 1000
             break;
     }
-    
+
     precioTotal = precioBebidas + precioPlatos
     if(edad >= 60){
         Descuento60 = true
@@ -130,27 +130,27 @@ function calcularPrecio(cantidadPlatos, plato, cantidadBebidas, bebida, edad, me
     if(Descuento60=== true && DescuentoEfectivo ===false){
         precioTotal= precioTotal - (precioTotal *0.1)
         console.log("Tiene un descuento del 10% al tener mas de 60 años, su cuenta es:",precioTotal+(precioTotal*0.05));
-        console.log("cubiertos:",precioTotal*0.05)
         console.log("Metodo de pago:",metodoDePago);
     }
     else if (Descuento60 === false && DescuentoEfectivo === true){
         precioTotal= precioTotal - (precioTotal *0.1)
         console.log("Tiene un descuento del 10% al pagar en Efectivo, su cuenta es:",precioTotal+(precioTotal*0.05));
-        console.log("cubiertos:",precioTotal*0.05)
         console.log("Metodo de pago:",metodoDePago);
     }
     else if (Descuento60 === true && DescuentoEfectivo === true){
         precioTotal= precioTotal - (precioTotal *0.1)-(precioTotal*0.1)
         console.log("Tiene dos descuentos del 10%, al pagar en efectivo y al ser mayor de 60 años, su cuenta es:",precioTotal+(precioTotal*0.05));
-        console.log("cubiertos:",precioTotal*0.05)
         console.log("Metodo de pago:",metodoDePago);
     }
     else{
         console.log("Su precio es:",precioTotal);
-        console.log("cubiertos:",precioTotal*0.05)
         console.log("Metodo de pago:",metodoDePago);
     }
-    
+    return precioTotal
+}
+
+function valorCubierto(precioTotal){
+    console.log("valor del cubierto:",precioTotal*0.05);
 }
 
 function gestionarPedido(){
@@ -163,13 +163,15 @@ function gestionarPedido(){
     let plato = 2
     let metodoDePago = "Efectivo"
     const HORA = 150
+    let precioTotal 
     saludo(nombre, apellido);
     verificarEdad(edad);
     console.group("Pedido");
     bebidas(edad, cantidadBebidas, bebida);
     comida(cantidadPlatos, plato);
     horaPedido(HORA, nombre)
-    calcularPrecio(cantidadPlatos, plato, cantidadBebidas, bebida, edad, metodoDePago)
+    precioTotal = calcularPrecio(cantidadPlatos, plato, cantidadBebidas, bebida, edad, metodoDePago)
+    valorCubierto(precioTotal);
 }
 
 gestionarPedido();
