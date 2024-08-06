@@ -87,7 +87,7 @@ La nota más alta */
 let nombre = "juanito"
 let notas =[6,6,6,6,7,8,7,2]
 let aprobacion = 6;
-function colegio(nombre, notas, aprobacion){
+function colegio(nombre, notas, _aprobacion){
     console.log(`alumno:${nombre}`)
     console.log(`materias cursadas:${notas.length}`)
     console.log(`materias aprobadas:${notas.filter(function(nota){
@@ -98,7 +98,7 @@ function colegio(nombre, notas, aprobacion){
         console.log(aprobadas.length)
         return 
     })}`)
-    console.log(`las notas de estas:${notas.filter(function(nota,aprobacion){
+    console.log(`las notas de estas:${notas.filter(function(nota,_aprobacion){
         let aprobadas = []
         if(nota >= 6){
             aprobadas.push(nota)
@@ -308,4 +308,239 @@ console.log(notitas.some(function(num){
 
 console.log(edades.some(function(num){
     return num >= 13 || num <=17
-}))g
+}))
+
+//----------------------------------------------- practica 2 ------------------------------
+
+/*1. Tienes dos listas de productos en tu tienda online. Combina estas listas en una sola usando lo visto
+anteriormente y mostrarlo por consola.*/
+
+let electronics = ['laptop', 'phone', 'tablet']; 
+let accessories = ['headphones', 'charger', 'case'];
+
+let allArticles = [...accessories, ...electronics]
+console.log(allArticles)
+
+/*2. Tienes una lista de los productos más vendidos. Extrae el primero y
+el segundo producto usando destructuring.*/
+
+let bestSellers = ['laptop', 'phone', 'tablet', 'monitor'];
+
+let [best1, best2] = bestSellers
+console.log(best1, best2)
+
+/*3. Verifica si el producto phone existe en la lista de productos, si existe, mostrar por consola un mensaje
+“Existe el producto [nombre del producto]” */
+
+let saleItems = ['laptop', 'phone', 'headphones'];
+function siExiste (array){
+    return array.includes("phone")
+}
+if (siExiste(saleItems)== true){
+    console.log("existe el producto")
+}
+else{
+    console.log("no existe el producto")
+}
+
+/*4. Verifica si un producto específico está en la lista de deseos. Si existe, mostrar por
+consola un mensaje “El producto existe, su nombre es [nombre del producto]” */
+
+let wishlist = ['laptop', 'phone', 'headphones'];
+
+let articulo = "laptop"
+if (wishlist.includes(articulo)){
+    console.log("el articulo existe, se llama",articulo)
+}
+else{
+    console.log("el producto no existe")
+}
+//TO-DO
+/*5. Filtra los productos que empiezan con la letra 'p' en la lista. */
+
+let products = [
+    'laptop',
+    'phone',
+    'tablet',
+    'printer', 
+    'pen',
+    'monitor',
+    'keyboard',
+    'mouse',
+    'headphones',
+    'camera',
+    'notebook'
+  ];
+  
+  let pProductos = []
+  pProductos = products.filter(function(num){
+    return num.includes("p")
+  })
+  console.log(pProductos)
+
+/*6. Escribe una función combineProductLists que tome dos listas de productos y las combine en una sola
+usando la sintaxis spread.*/
+function combineProductLists(array1, array2){
+    let retorno =[]
+    return retorno = [...array1, ...array2]
+
+}
+console.log(combineProductLists(products, saleItems))
+
+/*7. Crea una función getTopTwo que tome una lista de productos y
+devuelva los dos primeros usando destructuring.*/
+
+function getTopTwo(array){
+    let [p1, p2] = array
+    console.log(p1,p2)
+}
+getTopTwo(products)
+
+/*8.Escribe una función isOnSale que verifique si algún producto de una lista de
+productos en oferta es un artículo específico.*/
+
+let ofertitas = ["lavarropas", "secador", "phone"]
+function isOnSale(array, producto){
+    return array.includes(producto)
+}
+
+if (isOnSale(products, ofertitas[2])== true){
+    console.log("esta en oferta")
+}
+else{console.log("no")}
+
+/*9.Crea una función areAllWordsLong que verifique si todas las palabras en una lista tienen más
+de tres letras. */
+
+function areAllWordsLong(array){
+    let chequer = array.every(function(num){
+        return num.length > 3
+    })
+    return chequer
+}
+console.log(areAllWordsLong(ofertitas))
+
+/*10.Crea una función areAllEven que verifique si todos los números en una lista son pares. */
+let numeroides =[ 2,30,452,6666,]
+function areAllEven(array){
+    let chequer = array.every(function(num){
+        return num %2 === 0;
+    })
+    return chequer
+}
+console.log(areAllEven(numeroides))
+
+/*11. Escribe una función findProductWithLetter que encuentre el primer producto en la
+lista que contiene una letra específica.*/
+
+function findProductWithLetter(array){
+    let retornator = array.find(function(str){
+        return str.includes("a")
+    })
+    return retornator
+}
+
+console.log(findProductWithLetter(products))
+
+/*12.Define una función createProduct que agregue a un array el producto, pero que antes verifique si el 
+producto ya existe en ese array*/
+
+function createProduct(array, producto){
+    if(array.includes(producto)=== true){
+        console.log("ya existe panchoide")
+    }
+    else{
+        array.push(producto)
+    }
+}
+console.log(createProduct(products,"salchichon primavera"), products);
+
+/*13. Escribe una función arePricesInRange que compruebe si todos los precios de una lista están entre 50 y 150.*/
+
+let precios = [120,140,55]
+function arePricesInRange(array){
+    chequer = array.every(function(num){
+        return num >= 50 && num<= 150
+    })
+    return chequer
+}
+console.log(arePricesInRange(precios))
+
+/*14. Define una función formatExpensiveProducts que tome una lista de precios y agregue una etiqueta
+Caro a los precios superiores a 100. */
+
+function formatExpensiveProducts(prices) {
+    var expensivePrices = prices.filter(function(price) {
+      return price > 100;
+    });
+  
+    var cheapPrices = prices.filter(function(price) {
+      return price <= 100;
+    });
+    var result = [];
+    prices.filter(function(price) {
+      if (expensivePrices.includes(price)) {
+        result.push('Caro '+ price);
+      } else {
+        result.push(price.toString());
+      }
+    });
+  
+    return result;
+  }
+console.log(formatExpensiveProducts(precios))
+
+/*15. Define una función addIfNotExists que añada un producto a una lista solo si no está ya presente.*/
+
+function createProduct(array, producto){
+    if(array.includes(producto)=== true){
+        console.log("ya existe panchoide")
+    }
+    else{
+        array.push(producto)
+    }
+}
+console.log(createProduct(products,"salchichon primavera"), products);
+
+/*16. Crea una función createDescriptions que tome una lista de nombres de productos y una lista de precios, y devuelva una lista de descripciones
+que combine ambos usando map.*/
+
+let preciosos = [20, 29, 89]
+let productitos = ["tablet", "celular", "salchicha"]
+
+function createDescriptions(arrayPrecios, arrayProductos){
+    let resultado = arrayProductos.map(function(elemento, index){
+        return console.log(arrayProductos[index]+" cuesta "+arrayPrecios[index])
+    })
+}
+console.log(createDescriptions(preciosos, productitos))
+
+/*17. Crea una función addToWishlist que añada un producto a la lista de deseos solo si el producto no
+está ya presente y la lista de deseos tiene menos de 5 productos. Realizar validaciones correspondientes.*/
+
+
+function createProduct(array, producto){
+    if(array.includes(producto)=== true || array.length>=5){
+        console.log("ya existe panchoide")
+    }
+    else{
+        array.push(producto)
+    }
+}
+console.log(createProduct(products,"salchichon primavera"));
+
+/*18.Define una función inventoryMessages que tome una lista de productos y una lista de cantidades en
+inventario, devolviendo una lista de mensajes que indiquen si cada producto está en stock o agotado.*/
+let lasCaprichosas = ["sal","azucar", "vinagre"]
+let cantidades =[4,0,99]
+function inventoryMessages(array1, array2){
+    array1.map(function(elemento, index){
+        if(array2[index]!= 0){
+            console.log(`el producto ${array1[index]} esta en stock`)
+        }
+        else{
+            console.log("out of stock")
+        }
+    })
+}
+inventoryMessages(lasCaprichosas, cantidades)
